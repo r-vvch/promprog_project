@@ -1,0 +1,8 @@
+version: '1'
+services:
+  classification:
+    image: classification
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true

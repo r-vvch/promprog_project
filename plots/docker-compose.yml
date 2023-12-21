@@ -1,0 +1,8 @@
+version: '1'
+services:
+  plots:
+    image: plots
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
