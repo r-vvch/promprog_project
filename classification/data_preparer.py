@@ -99,21 +99,26 @@ def density_counter(quality):
         
     return d
 
+if __name__ == "__main__":
 
-df_4K = pd.DataFrame(data=density_counter('4K'))
-df_1440 = pd.DataFrame(data=density_counter('1440'))
-df_1080 = pd.DataFrame(data=density_counter('1080'))
-df_720 = pd.DataFrame(data=density_counter('720'))
-df_480 = pd.DataFrame(data=density_counter('480'))
-df_360 = pd.DataFrame(data=density_counter('360'))
+    print("Starting data preparation")
 
-df_4K["Quality"] = "2160"
-df_1440["Quality"] = "1440"
-df_1080["Quality"] = "1080"
-df_720["Quality"] = "720"
-df_480["Quality"] = "480"
-df_360["Quality"] = "360"
+    df_4K = pd.DataFrame(data=density_counter('4K'))
+    df_1440 = pd.DataFrame(data=density_counter('1440'))
+    df_1080 = pd.DataFrame(data=density_counter('1080'))
+    df_720 = pd.DataFrame(data=density_counter('720'))
+    df_480 = pd.DataFrame(data=density_counter('480'))
+    df_360 = pd.DataFrame(data=density_counter('360'))
 
-data = pd.concat([df_4K, df_1440, df_1080, df_720, df_480, df_360], ignore_index=True)
+    df_4K["Quality"] = "2160"
+    df_1440["Quality"] = "1440"
+    df_1080["Quality"] = "1080"
+    df_720["Quality"] = "720"
+    df_480["Quality"] = "480"
+    df_360["Quality"] = "360"
 
-data.to_csv('data.csv')  
+    data = pd.concat([df_4K, df_1440, df_1080, df_720, df_480, df_360], ignore_index=True)
+
+    data.to_csv('data.csv')  
+
+    print("Data saved to data.csv")

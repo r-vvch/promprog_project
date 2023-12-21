@@ -6,14 +6,37 @@ Project for industrial programming course
 
 Classifiers and data preparation
 
+Required packages: pandas, scikit-learn
+
 ```
-usage:
-
-python3 data_praparation.py
-
+usage:  
+python3 data_praparation.py  
 python3 classifier.py
+```
+
+Work examples:
 
 ```
+Starting data preparation
+Data saved to data.csv
+
+KNN best result:
+n = 5
+accuracy = 0.71
+
+SVC best result:
+kernel = linear
+accuracy = 0.71
+
+CatBoost best result:
+iterations = 200, cv = 10, learning_rate = 0.05
+accuracy = 0.75
+
+Best classifier is CatBoost with accuracy = 0.75
+
+Result is saved in result.txt
+```
+
 
 ## plots
 
